@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+'use client';
 import { useId } from 'react';
-import { type Metadata } from 'next';
 import Link from 'next/link';
 
 import { Border } from '@/components/Border';
@@ -9,6 +12,7 @@ import { FadeIn } from '@/components/FadeIn';
 import { Offices } from '@/components/Offices';
 import { PageIntro } from '@/components/PageIntro';
 import { SocialMedia } from '@/components/SocialMedia';
+import { useRouter } from 'next/navigation';
 
 function TextInput({
   label,
@@ -35,26 +39,41 @@ function TextInput({
   );
 }
 
-function RadioInput({
-  label,
-  ...props
-}: React.ComponentPropsWithoutRef<'input'> & { label: string }) {
-  return (
-    <label className='flex gap-x-3'>
-      <input
-        type='radio'
-        {...props}
-        className='h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2'
-      />
-      <span className='text-base/6 text-neutral-950'>{label}</span>
-    </label>
-  );
-}
-
 function ContactForm() {
+  const router = useRouter();
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        access_key: 'ea67efe1-0b54-4409-a013-e49ad616bfc6',
+        Name: formData.get('name'),
+        Email: formData.get('email'),
+        Company: formData.get('company'),
+        'Business Site/Splash Page': formData.get('Business Site/Splash Page') ?? 'No',
+        'CMS/Blog/NewsPaper': formData.get('CMS/Blog/Newspaper') ?? 'No',
+        'E-Commerce': formData.get('E-Commerce') ?? 'No',
+        'Backend Solutions': formData.get('Backend Solutions') ?? 'No',
+        'Branding and Design': formData.get('Branding and Design') ?? 'No',
+        Message: formData.get('message'),
+      }),
+    });
+    const result = await response.json();
+    if (result.success) {
+      router.push('/contact');
+    }
+  }
   return (
     <FadeIn className='lg:order-last'>
-      <form>
+      <form onSubmit={handleSubmit}>
         <h2 className='font-display text-base font-semibold text-neutral-950'>Work inquiries</h2>
         <div className='isolate mt-6 -space-y-px rounded-2xl bg-white/50'>
           <TextInput label='Name' name='name' autoComplete='name' />
@@ -64,12 +83,43 @@ function ContactForm() {
           <TextInput label='Message' name='message' />
           <div className='border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl'>
             <fieldset>
-              <legend className='text-base/6 text-neutral-500'>Budget</legend>
-              <div className='mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2'>
-                <RadioInput label='$25K – $50K' name='budget' value='25' />
-                <RadioInput label='$50K – $100K' name='budget' value='50' />
-                <RadioInput label='$100K – $150K' name='budget' value='100' />
-                <RadioInput label='More than $150K' name='budget' value='150' />
+              <legend className='text-base/6 text-neutral-500'>
+                Which services are you interested in? (Check all that apply)
+              </legend>
+              <div className='flex flex-col justify-center items-start w-full flex-wrap gap-4'>
+                <div className='flex flex-row gap-4 justify-center items-center '>
+                  <input
+                    type='checkbox'
+                    name='Business Site/Splash Page'
+                    value='Business Site/Splash Page'
+                  />
+                  <label htmlFor='Business Site/Splash Page'>Business Site/Splash Page</label>
+                </div>
+
+                <div className='flex flex-row gap-4 justify-center items-center '>
+                  <input type='checkbox' name='CMS/Blog/Newspaper' value='Yes' />
+                  <label htmlFor='CMS/Blog/Newspaper'>CMS/Blog/Newspaper</label>
+                </div>
+
+                <div className='flex flex-row gap-4 justify-center items-center '>
+                  <input type='checkbox' name='E-Commerce' value='Yes' />
+                  <label htmlFor='E-Commerce'>E-Commerce</label>
+                </div>
+
+                <div className='flex flex-row gap-4 justify-center items-center '>
+                  <input type='checkbox' name='Backend Solutions' value='Yes' />
+                  <label htmlFor='Backend Solutions'>Backend Solutions</label>
+                </div>
+
+                <div className='flex flex-row gap-4 justify-center items-center '>
+                  <input type='checkbox' name='Branding and Design' value='Yes' />
+                  <label htmlFor='Branding and Design'>Branding and Design</label>
+                </div>
+
+                <div className='flex flex-row gap-4 justify-center items-center '>
+                  <input type='checkbox' name='Something Else' value='Yes' />
+                  <label htmlFor='Something Else'>Something Else</label>
+                </div>
               </div>
             </fieldset>
           </div>
@@ -119,11 +169,6 @@ function ContactDetails() {
     </FadeIn>
   );
 }
-
-export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Let’s work together. We can’t wait to hear from you.',
-};
 
 export default function Contact() {
   return (
