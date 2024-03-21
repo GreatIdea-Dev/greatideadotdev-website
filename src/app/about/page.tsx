@@ -11,7 +11,7 @@ import { PageLinks } from '@/components/PageLinks';
 import { SectionIntro } from '@/components/SectionIntro';
 import { StatList, StatListItem } from '@/components/StatList';
 import imageJohnLarson from '@/images/team/johnlarson.jpeg';
-import imageKadynStafford from '@/images/team/johnlarson.jpeg';
+import imageKadynStafford from '@/images/team/kadynstafford.jpeg';
 import { loadArticles } from '@/lib/mdx';
 
 function Culture() {
