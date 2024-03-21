@@ -48,7 +48,7 @@ const team = [
     people: [
       {
         name: 'John Larson',
-        role: 'Founder/Senior Engineer',
+        role: 'Founder/Lead Developer',
         image: { src: imageJohnLarson },
       },
       {
