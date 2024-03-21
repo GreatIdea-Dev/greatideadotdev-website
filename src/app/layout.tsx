@@ -6,8 +6,8 @@ import '@/styles/tailwind.css';
 
 export const metadata: Metadata = {
   title: {
-    template: 'Great Idea Development',
-    default: "Great Idea Development - Mississippi's premier software development studio",
+    template: 'GreatIdea.dev',
+    default: "GreatIdea.dev - Mississippi's premier software development studio",
   },
 };
 

@@ -1,5 +1,5 @@
-import { type Config } from 'tailwindcss'
-import defaultTheme from 'tailwindcss/defaultTheme'
+import { type Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
   content: ['./src/**/*.{js,jsx,mdx,ts,tsx}'],
@@ -27,8 +27,12 @@ export default {
           ['Mona Sans', ...defaultTheme.fontFamily.sans],
           { fontVariationSettings: '"wdth" 125' },
         ],
+        montserrat: [
+          ['Montserrat', ...defaultTheme.fontFamily.sans],
+          { fontVariationSettings: '"wdth" 125' },
+        ],
       },
     },
   },
   plugins: [],
-} satisfies Config
+} satisfies Config;

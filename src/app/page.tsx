@@ -183,9 +183,9 @@ export default async function Home() {
     <>
       <Container className='mt-24 sm:mt-32 md:mt-56'>
         <FadeIn className='max-w-3xl'>
-          <h1 className='font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl'>
-            Mississippi&apos;s premier software development studio
-          </h1>
+          <h3 className='font-display text-5xl mt-6 font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl'>
+            Mississippi&apos;s premier software development team
+          </h3>
           <p className='mt-6 text-xl text-neutral-600'>
             At the forefront of digital innovation, our team excels in designing and developing
             premium web applications tailored for businesses seeking to launch or enhance their
@@ -203,9 +203,9 @@ export default async function Home() {
         className='mt-24 sm:mt-32 lg:mt-40'
         client={{ name: 'Phobia', logo: logoRipleighDesignsDark }}
       >
-        The team at Great Idea Development went above and beyond to make sure our website met our
-        needs to showcase our products and provide potential customers a way to contact us and
-        engage in business.
+        The team at GreatIdea.dev went above and beyond to make sure our website met our needs to
+        showcase our products and provide potential customers a way to contact us and engage in
+        business.
       </Testimonial>
 
       <Services />

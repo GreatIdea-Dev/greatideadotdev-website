@@ -122,7 +122,7 @@ export function Footer() {
             </div>
           </Link>
           <p className='text-sm text-neutral-700'>
-            © Great Idea Development {new Date().getFullYear()}
+            &copy; GreatIdea.dev {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

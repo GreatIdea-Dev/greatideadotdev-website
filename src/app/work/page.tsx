@@ -14,6 +14,10 @@ import { Testimonial } from '@/components/Testimonial';
 import logoRipleighDesigns from '@/images/clients/ripleighdesigns/RipleighDesignsWordmark.svg';
 import { formatDate } from '@/lib/formatDate';
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx';
+import logoGreatIdea from '@/images/clients/great-idea/Great Idea Logomark.svg';
+import logoMyOnlineCookbook from '@/images/clients/my-online-cookbook/my-online-cookbook-white.png';
+import logoW5DEV from '@/images/clients/w5dev/w5dev-white.png';
+import logoJediKay from '@/images/clients/jedikay/JediKay.png';
 
 function CaseStudies({ caseStudies }: { caseStudies: MDXEntry<CaseStudy>[] }) {
   return (
@@ -81,11 +85,11 @@ function CaseStudies({ caseStudies }: { caseStudies: MDXEntry<CaseStudy>[] }) {
 
 const clients = [
   ['Ripleigh Designs', logoRipleighDesigns],
-  ['JediKay', logoRipleighDesigns],
-  ['W5DEV', logoRipleighDesigns],
-  ['My Online Cookbook', logoRipleighDesigns],
-  ['Great Idea Media', logoRipleighDesigns],
-  ['Great Idea Development', logoRipleighDesigns],
+  ['JediKay', logoJediKay],
+  ['W5DEV', logoW5DEV],
+  ['My Online Cookbook', logoMyOnlineCookbook],
+  ['Great Idea Media', logoGreatIdea],
+  ['GreatIdeaDotDev', logoGreatIdea],
 ];
 
 function Clients() {
