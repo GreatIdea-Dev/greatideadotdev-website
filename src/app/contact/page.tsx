@@ -63,12 +63,22 @@ function ContactForm() {
         'E-Commerce': formData.get('E-Commerce') ?? 'No',
         'Backend Solutions': formData.get('Backend Solutions') ?? 'No',
         'Branding and Design': formData.get('Branding and Design') ?? 'No',
+        'Something Else': formData.get('Something Else') ?? '',
         Message: formData.get('message'),
       }),
     });
     const result = await response.json();
     if (result.success) {
-      router.push('/contact');
+      window.alert('Your message has been received! We will reach out shortly.');
+      formData.set('name', '');
+      formData.set('email', '');
+      formData.set('company', '');
+      formData.set('Business Site/Splash Page', '');
+      formData.set('CMS/Blog/NewsPaper', '');
+      formData.set('E-Commerce', '');
+      formData.set('Backend Solutions', '');
+      formData.set('Branding and Design', '');
+      formData.set('Something Else', '');
     }
   }
   return (
