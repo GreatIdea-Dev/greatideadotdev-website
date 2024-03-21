@@ -59,10 +59,14 @@ function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const socialMediaProfiles = [
   { title: 'Facebook', href: 'https://facebook.com/greatidea.dev/', icon: FacebookIcon },
-  { title: 'Instagram', href: 'https://www.facebook.com/greatidea.dev/', icon: InstagramIcon },
+  { title: 'Instagram', href: 'https://www.instagram.com/greatidea.dev/', icon: InstagramIcon },
   { title: 'Twitter', href: 'https://www.twitter.com/greatideadotdev/', icon: XIcon },
-  { title: 'LinkedIn', href: 'https://www.linkedin.com/in/greatidea.dev/', icon: LinkedInIcon },
-  { title: 'GitHub', href: 'https://github.com/w5dev', icon: GitHubIcon },
+  {
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/greatideadotdev/',
+    icon: LinkedInIcon,
+  },
+  { title: 'GitHub', href: 'https://github.com/organizations/GreatIdea-Dev', icon: GitHubIcon },
 ];
 
 export function SocialMedia({
