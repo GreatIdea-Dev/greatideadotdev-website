@@ -11,7 +11,6 @@ import { FadeIn } from '@/components/FadeIn';
 import { Offices } from '@/components/Offices';
 import { PageIntro } from '@/components/PageIntro';
 import { SocialMedia } from '@/components/SocialMedia';
-import { useRouter } from 'next/navigation';
 
 function TextInput({
   label,
@@ -39,8 +38,6 @@ function TextInput({
 }
 
 function ContactForm() {
-  const router = useRouter();
-
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
