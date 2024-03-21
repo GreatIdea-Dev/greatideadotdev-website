@@ -53,18 +53,11 @@ function Header({
   toggleRef: React.RefObject<HTMLButtonElement>;
   invert?: boolean;
 }) {
-  const { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!;
-
   return (
     <Container>
       <div className='flex items-center justify-between'>
-        <Link
-          href='/'
-          aria-label='Home'
-          onMouseEnter={() => setLogoHovered(true)}
-          onMouseLeave={() => setLogoHovered(false)}
-        >
-          <div className='h-24'>
+        <Link href='/' aria-label='Home'>
+          <div className={invert ? 'text-white w-36' : 'text-neutral-950 w-36'}>
             <Logo />
           </div>
         </Link>
