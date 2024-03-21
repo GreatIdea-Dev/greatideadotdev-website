@@ -1,6 +1,6 @@
-import { useId } from 'react'
-import Image, { type ImageProps } from 'next/image'
-import clsx from 'clsx'
+import { useId } from 'react';
+import Image, { type ImageProps } from 'next/image';
+import clsx from 'clsx';
 
 const shapes = [
   {
@@ -18,54 +18,40 @@ const shapes = [
     height: 680,
     path: 'M632.827 9.245A11.5 11.5 0 0 1 644.104 0h63.366c7.257 0 12.7 6.64 11.277 13.755l-25.6 128A11.5 11.5 0 0 1 681.87 151h-28.275a15.999 15.999 0 0 0-15.689 12.862l-95.832 479.159c-4.3 21.502-23.18 36.979-45.107 36.979H178.502c-29.028 0-50.8-26.557-45.107-55.021l102.4-512C240.096 91.477 258.975 76 280.902 76h318.465c10.136 0 21.179-5.35 23.167-15.288l10.293-51.467Zm0 479A11.5 11.5 0 0 1 644.104 479h63.366c7.257 0 12.7 6.639 11.277 13.755l-25.6 128A11.5 11.5 0 0 1 681.87 630h-63.366c-7.257 0-12.7-6.639-11.277-13.755l25.6-128ZM37.104 159a11.5 11.5 0 0 0-11.277 9.245l-25.6 128C-1.196 303.361 4.247 310 11.504 310H74.87a11.5 11.5 0 0 0 11.277-9.245l24.76-123.798a.03.03 0 0 1 .052-.012c.015.021.048.012.052-.014C114.016 158.98 120.134 151 143 151h58.87a11.5 11.5 0 0 0 11.277-9.245l25.6-128C240.17 6.64 234.727 0 227.47 0h-63.366a11.5 11.5 0 0 0-11.277 9.245l-24.754 123.771c-.002.011-.016.015-.024.006-.007-.009-.021-.005-.023.007-3.469 18.452-13.551 25.107-24.88 25.981-.848.065-1.699 0-2.549-.009l-.127-.001H37.104Z',
   },
-]
+];
 
-type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
+type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string };
 
 export function StylizedImage({
   shape = 0,
   className,
   ...props
 }: ImagePropsWithOptionalAlt & { shape?: 0 | 1 | 2 }) {
-  let id = useId()
-  let { width, height, path } = shapes[shape]
+  const id = useId();
+  const { width, height, path } = shapes[shape];
 
   return (
-    <div
-      className={clsx(
-        className,
-        'relative flex aspect-[719/680] w-full grayscale',
-      )}
-    >
-      <svg viewBox={`0 0 ${width} ${height}`} fill="none" className="h-full">
-        <g clipPath={`url(#${id}-clip)`} className="group">
-          <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
+    <div className={clsx(className, 'relative flex aspect-[719/680] w-full grayscale')}>
+      <svg viewBox={`0 0 ${width} ${height}`} fill='none' className='h-full'>
+        <g clipPath={`url(#${id}-clip)`} className='group'>
+          <g className='origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105'>
             <foreignObject width={width} height={height}>
               <Image
-                alt=""
-                className="w-full bg-neutral-100 object-cover"
+                alt=''
+                className='w-full bg-neutral-100 object-cover'
                 style={{ aspectRatio: `${width} / ${height}` }}
                 {...props}
               />
             </foreignObject>
           </g>
-          <use
-            href={`#${id}-shape`}
-            strokeWidth="2"
-            className="stroke-neutral-950/10"
-          />
+          <use href={`#${id}-shape`} strokeWidth='2' className='stroke-neutral-950/10' />
         </g>
         <defs>
           <clipPath id={`${id}-clip`}>
-            <path
-              id={`${id}-shape`}
-              d={path}
-              fillRule="evenodd"
-              clipRule="evenodd"
-            />
+            <path id={`${id}-shape`} d={path} fillRule='evenodd' clipRule='evenodd' />
           </clipPath>
         </defs>
       </svg>
     </div>
-  )
+  );
 }
