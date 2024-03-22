@@ -7,44 +7,31 @@ import { Container } from '@/components/Container';
 import { FadeIn, FadeInStagger } from '@/components/FadeIn';
 import { GridList, GridListItem } from '@/components/GridList';
 import { PageIntro } from '@/components/PageIntro';
-import { PageLinks } from '@/components/PageLinks';
 import { SectionIntro } from '@/components/SectionIntro';
 import { StatList, StatListItem } from '@/components/StatList';
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg';
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg';
-import imageBlakeReid from '@/images/team/blake-reid.jpg';
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg';
-import imageDriesVincent from '@/images/team/dries-vincent.jpg';
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg';
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg';
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg';
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg';
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg';
-import imageMichaelFoster from '@/images/team/michael-foster.jpg';
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg';
-import { loadArticles } from '@/lib/mdx';
+import imageJohnLarson from '@/images/team/johnlarson.jpeg';
+import imageKadynStafford from '@/images/team/kadynstafford.jpeg';
 
 function Culture() {
   return (
     <div className='mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32'>
-      <SectionIntro
-        eyebrow='Our culture'
-        title='Balance your passion with your passion for life.'
-        invert
-      >
-        <p>We are a group of like-minded people who share the same core values.</p>
+      <SectionIntro eyebrow='Our culture' title='We bleed bits and bytes' invert>
+        <p>We believe software engineering is a lifestyle, not just an occupation.</p>
       </SectionIntro>
       <Container className='mt-16'>
         <GridList>
-          <GridListItem title='Loyalty' invert>
-            Our team has been with us since the beginning because none of them are allowed to have
-            LinkedIn profiles.
+          <GridListItem title='Innovation' invert>
+            Our team is constantly growing in knowledge so we can cultivate an environment that
+            supports creative problem solving and a continuous evolution of our products and
+            processes.
           </GridListItem>
-          <GridListItem title='Trust' invert>
-            We don’t care when our team works just as long as they are working every waking second.
+          <GridListItem title='Specialization' invert>
+            We believe in becoming masters of our tools so we can solve complex problems and create
+            innovative solutions both effectively and efficiently.
           </GridListItem>
-          <GridListItem title='Compassion' invert>
-            You never know what someone is going through at home and we make sure to never find out.
+          <GridListItem title='Collaboration' invert>
+            We believe a team must work as a community and utilize all available resources on each
+            project in order to foster the creation of superior solutions.
           </GridListItem>
         </GridList>
       </Container>
@@ -54,72 +41,17 @@ function Culture() {
 
 const team = [
   {
-    title: 'Leadership',
-    people: [
-      {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
-      },
-      {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
-      },
-    ],
-  },
-  {
     title: 'Team',
     people: [
       {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
+        name: 'John Larson',
+        role: 'Founder/Lead Developer',
+        image: { src: imageJohnLarson },
       },
       {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
+        name: 'Kadyn Stafford',
+        role: 'UI/UX Engineer',
+        image: { src: imageKadynStafford },
       },
     ],
   },
@@ -174,51 +106,43 @@ function Team() {
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+  description: 'Our strength is humanity',
 };
 
-export default async function About() {
-  const blogArticles = (await loadArticles()).slice(0, 2);
-
+export default function About() {
   return (
     <>
-      <PageIntro eyebrow='About us' title='Our strength is collaboration'>
+      <PageIntro eyebrow='About us' title='Our strength is humanity'>
         <p>
-          We believe that our strength lies in our collaborative approach, which puts our clients at
-          the center of everything we do.
+          We believe that treating others with respect is the key to long lasting and strong
+          relationships.
         </p>
         <div className='mt-10 max-w-2xl space-y-6 text-base'>
           <p>
-            Studio was started by three friends who noticed that developer studios were charging
-            clients double what an in-house team would cost. Since the beginning, we have been
-            committed to doing things differently by charging triple instead.
+            GreatIdea.dev is founded on the principle that no matter who we engage with, whether
+            they are family, friends, clients or neighbors, our communication and actions should
+            come from a place of respect and kindness. In software development, this translates to a
+            more stress-free project management flow, which we believe produces a superior product.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This means we pay very
-            little and expect people to work late. We want our employees to bring their whole selves
-            to work. In return, we just ask that they keep themselves there until at least 6:30pm.
+            Mississippi is not only where we live, but it is in our blood. We believe in serving our
+            community by offering competitively priced solutions for exceptional quality digital
+            products. We believe in adding value wherever possible as a way to give back to
+            businesses and individuals who work hard to make Mississippi a great place to live.
           </p>
         </div>
       </PageIntro>
       <Container className='mt-16'>
         <StatList>
-          <StatListItem value='35' label='Underpaid employees' />
-          <StatListItem value='52' label='Placated clients' />
-          <StatListItem value='$25M' label='Invoices billed' />
+          <StatListItem value='10+' label='Years of experience' />
+          <StatListItem value='63' label='Clients served' />
+          <StatListItem value='47' label='Unique industries' />
         </StatList>
       </Container>
 
       <Culture />
 
       <Team />
-
-      <PageLinks
-        className='mt-24 sm:mt-32 lg:mt-40'
-        title='From the blog'
-        intro='Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design.'
-        pages={blogArticles}
-      />
 
       <ContactSection />
     </>

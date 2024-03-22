@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 'use client';
-import { useId } from 'react';
+import { useId, useState } from 'react';
 
 import { Border } from '@/components/Border';
 import { Button } from '@/components/Button';
@@ -38,6 +38,7 @@ function TextInput({
 }
 
 function ContactForm() {
+  const [successfulSubmission, setSuccessfulSubmission] = useState(false);
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -66,19 +67,10 @@ function ContactForm() {
     });
     const result = await response.json();
     if (result.success) {
-      window.alert('Your message has been received! We will reach out shortly.');
-      formData.set('name', '');
-      formData.set('email', '');
-      formData.set('company', '');
-      formData.set('Business Site/Splash Page', '');
-      formData.set('CMS/Blog/NewsPaper', '');
-      formData.set('E-Commerce', '');
-      formData.set('Backend Solutions', '');
-      formData.set('Branding and Design', '');
-      formData.set('Something Else', '');
+      setSuccessfulSubmission(true);
     }
   }
-  return (
+  const submissionContent = !successfulSubmission ? (
     <FadeIn className='lg:order-last'>
       <form onSubmit={handleSubmit}>
         <h2 className='font-display text-base font-semibold text-neutral-950'>Work inquiries</h2>
@@ -102,27 +94,22 @@ function ContactForm() {
                   />
                   <label htmlFor='Business Site/Splash Page'>Business Site/Splash Page</label>
                 </div>
-
                 <div className='flex flex-row gap-4 justify-center items-center '>
                   <input type='checkbox' name='CMS/Blog/Newspaper' value='Yes' />
                   <label htmlFor='CMS/Blog/Newspaper'>CMS/Blog/Newspaper</label>
                 </div>
-
                 <div className='flex flex-row gap-4 justify-center items-center '>
                   <input type='checkbox' name='E-Commerce' value='Yes' />
                   <label htmlFor='E-Commerce'>E-Commerce</label>
                 </div>
-
                 <div className='flex flex-row gap-4 justify-center items-center '>
                   <input type='checkbox' name='Backend Solutions' value='Yes' />
                   <label htmlFor='Backend Solutions'>Backend Solutions</label>
                 </div>
-
                 <div className='flex flex-row gap-4 justify-center items-center '>
                   <input type='checkbox' name='Branding and Design' value='Yes' />
                   <label htmlFor='Branding and Design'>Branding and Design</label>
                 </div>
-
                 <div className='flex flex-row gap-4 justify-center items-center '>
                   <input type='checkbox' name='Something Else' value='Yes' />
                   <label htmlFor='Something Else'>Something Else</label>
@@ -136,7 +123,17 @@ function ContactForm() {
         </Button>
       </form>
     </FadeIn>
+  ) : (
+    <FadeIn className='lg:order-last'>
+      <h2 className='font-display text-base font-semibold text-neutral-950'>
+        Thank you for reaching out!
+      </h2>
+      <p className='mt-6 text-base text-neutral-600'>
+        We will respond to your message as soon as possible!
+      </p>
+    </FadeIn>
   );
+  return submissionContent;
 }
 
 function ContactDetails() {
