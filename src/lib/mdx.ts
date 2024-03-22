@@ -28,17 +28,6 @@ type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string };
 
 export type MDXEntry<T> = T & { href: string; metadata: T };
 
-export interface Article {
-  date: string;
-  title: string;
-  description: string;
-  author: {
-    name: string;
-    role: string;
-    image: ImagePropsWithOptionalAlt;
-  };
-}
-
 export interface CaseStudy {
   date: string;
   client: string;
@@ -55,10 +44,6 @@ export interface CaseStudy {
     };
     content: string;
   };
-}
-
-export function loadArticles() {
-  return loadEntries<Article>('blog', 'article');
 }
 
 export function loadCaseStudies() {

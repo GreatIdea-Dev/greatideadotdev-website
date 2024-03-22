@@ -110,8 +110,6 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
-  /* const blogArticles = (await loadArticles()).slice(0, 2); */
-
   return (
     <>
       <PageIntro eyebrow='About us' title='Our strength is humanity'>
@@ -145,13 +143,6 @@ export default function About() {
       <Culture />
 
       <Team />
-
-      {/* <PageLinks
-        className='mt-24 sm:mt-32 lg:mt-40'
-        title='From the industry'
-        intro='Take a look at some interesting news '
-        pages={blogArticles}
-      /> */}
 
       <ContactSection />
     </>
