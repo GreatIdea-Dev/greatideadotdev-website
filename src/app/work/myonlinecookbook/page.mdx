@@ -1,0 +1,65 @@
+import logo from '@/images/clients/my-online-cookbook/my-online-cookbook-cyan.png';
+import imageHero from './hero.png';
+import imageEmilyJackson from './emily-jackson.jpg';
+
+export const caseStudy = {
+  client: 'My Online Cookbook',
+  title: 'A better way to store recipes',
+  description:
+    'My Online Cookbook is an all-in-one solution for eliminating the clutter of storing physical recipes.',
+  summary: [
+    'Annoyed by the constant battle of keeping ingredients off of expensive cookbooks and printed recipes, Emily Jackson, local pastry chef and caterer, reached out to see if we could help create an online solution for her to store her vast library of cookbooks and hand written recipes so she could access them from everywhere.',
+    'We built out the application with redundancy and security in mind, using the latest technologies like Next.js, Go, PostgreSQL, and Docker.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2022-11',
+  service: 'Fullstack Web Development',
+  testimonial: {
+    author: { name: 'Emily Jackson', role: 'Head Chef at EJ Catering' },
+    content:
+      "John's team did a remarkable job of making my life as a chef easier and more manageable. I never imagined I would be able to get rid of all of my physical recipes and cookbooks and rely on a simple, easy-to-use solution to quickly find recipes. Best of all, I can share and print any of the recipes with a click of a button!",
+  },
+};
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+};
+
+## Overview
+
+Annoyed by the constant battle of keeping ingredients off of expensive cookbooks and printed recipes, Emily Jackson, local pastry chef and caterer, reached out to see if we could help create an online solution for her to store her vast library of cookbooks and hand written recipes so she could access them from everywhere.
+
+We got to work and spun up a Next.js instance and worked on creating an aesthetically pleasing UI that was easy to use and understand. After that we spun up a PostgreSQL database and worked to engineer the data types and schema to handle user and recipe information. We decided that building the API with Go was a no-brainer since it is quick and efficient and easy to simply write code in a secure and effective manner.
+
+We specifically developed this so that we did not have to rely on online microservices and hosted solutions, so Emily could access her recipes even during an internet or network outage. To do this, we dockerized our database and API and hosted it on Emily's network with tools to manage it remotely to assist with any technical problems. We also hosted a local instance of the frontend just in case the cloud-based website was ever unreachable. This should ensure that as long as Emily has power, she will have access to all of her recipes.
+
+We went above and beyond and coupled the software solutions with a robust battery backup and to ensure she can still access her recipes from her home for up to 84 hours after the losing power. To assist her business, we set up a new custom domain for her and an email address that uses that domain so she looks professional to all of her prospective clients.
+
+## What we did
+
+<TagList>
+  <TagListItem>Frontend (Next.js)</TagListItem>
+  <TagListItem>Backend API (Go)</TagListItem>
+  <TagListItem>Database (Postgres)</TagListItem>
+  <TagListItem>Docker</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Emily Jackson', role: 'Pastry Chef and Caterer' }}
+  image={{ src: imageEmilyJackson }}
+>
+  John's team did a remarkable job of making my life as a chef easier and more
+  manageable. I never imagined I would be able to get rid of all of my physical
+  recipes and cookbooks and rely on a simple, easy-to-use solution to quickly
+  find recipes. Best of all, I can share and print any of the recipes with a
+  click of a button!
+</Blockquote>
+
+<StatList>
+  <StatListItem value='300%' label='less mess' />
+  <StatListItem value='15x' label='faster recipe searching' />
+  <StatListItem value='25%' label='fewer broken eggs' />
+  <StatListItem value='5' label='empty bookshelves' />
+</StatList>

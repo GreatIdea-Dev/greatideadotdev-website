@@ -1,0 +1,63 @@
+import logo from '@/images/clients/extreme-networks/extreme-logo-color.svg';
+import imageHero from './hero.png';
+import imageExtremeLogo from './extreme-logo.png';
+
+export const caseStudy = {
+  client: 'Extreme Networks',
+  title: 'A go-to tool for viewing offline networks',
+  description:
+    'Extreme Networks partners with GreatIdea.dev to develop efficient and lightweight solutions to assist engineers and technicians in the field.',
+  summary: [
+    'In 2024, GreatIdea.dev was approached by a Senior Network Engineer for Extreme Networks with a unique problem: he wanted a way to make sense of the data he pulls from network switches on sites that are not cloud connected. This led to discussions regarding his exact needs and eventually turned into a project which allows them to parse the JSON response data from their local switch APIs to a readable table which displays all of the necessary information.',
+    'We developed a lightweight solution to parse JSON response data from Extreme Network switches using SolidJS.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2024-02',
+  service: 'Web development, custom applications',
+  testimonial: {
+    author: { name: 'Macy Jackson', role: 'Regional Technical Director' },
+    content:
+      'John and his team helped put together a quick solution to our problems and facilitates our unique needs to solve our day-to-day problems. We are excited about continuing this relationship to produce a future local app to handle this in the future.',
+  },
+};
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+};
+
+## Overview
+
+This project posed a straightforward problem: fetch data from an API, then serve it to a web page to parse into readable data. As we were developing this solution, we came across some fairly unique issues:
+
+1. The API on the switches are local resources.
+2. The JSON object returned from the switches is extremely complex, as well as redundant and repetitive.
+3. Some clients may have a locked down network that disallows for internet access.
+
+We solved this problem initially with a fairly routine solution. We used SolidJS to spin up a website and hosted it. That's when the fun started happening. Google Chrome has been securing their web browser more and more with each update, and in one update, they removed the ability to access private-network resources from a public ip address. This plus Vercel's policy to not make unsecure requests posed some fairly large technological problems for use.
+
+To combat these problems, we decided to instead create a field to paste the JSON object that was returned from the API call, then parse that data into a table. This wouldn't be our final solution, but it would allow us to develop the solution and get realtime feedback. We got good feedback regarding how the data was used and which parts were necessary, and we added links so engineers could access each of the tables. Our feedback for this iteration has been overwhelmingly positive and we are happy to be in the next phase of this project.\_createMdxContent
+
+The third solution made it clear what our goal needs to be for this project: develop a standalone application for this client. We are now planning this application out and plan to use Go to build and ship the app, along with re-enabling the API calls to make things more streamlined for this client. Our hope is that techs can use this without the need for an internet connection to further support the security requirements of their clients.
+
+## What we did
+
+<TagList>
+  <TagListItem>Frontend (Solid.js)</TagListItem>
+  <TagListItem>Custom Standalone Application (Go)</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Extreme Networks', role: 'Connect Beyond the Network' }}
+  image={{ src: imageExtremeLogo }}
+>
+  John really spent time getting down to the meat and potatoes of what we needed
+  and worked lightning fast to start providing solutions we could use and test
+  from Day 1. We cannot wait to see the final standalone product.
+</Blockquote>
+
+<StatList>
+  <StatListItem value='150%' label='faster data analysis' />
+  <StatListItem value='10x' label='real world efficiency' />
+</StatList>

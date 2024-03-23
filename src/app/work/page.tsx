@@ -11,13 +11,14 @@ import { Container } from '@/components/Container';
 import { FadeIn, FadeInStagger } from '@/components/FadeIn';
 import { PageIntro } from '@/components/PageIntro';
 import { Testimonial } from '@/components/Testimonial';
-import logoRipleighDesigns from '@/images/clients/ripleighdesigns/RipleighDesignsWordmark.svg';
+import logoRipleighDesigns from '@/images/clients/ripleighdesigns/RipleighDesignsWordmark-dark.svg';
 import { formatDate } from '@/lib/formatDate';
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx';
-import logoGreatIdea from '@/images/clients/great-idea/Great Idea Logomark.svg';
-import logoMyOnlineCookbook from '@/images/clients/my-online-cookbook/my-online-cookbook-white.png';
-import logoW5DEV from '@/images/clients/w5dev/w5dev-white.png';
+import logoGreatIdea from '@/images/clients/great-idea/great-idea-logomark-color.svg';
+import logoMyOnlineCookbook from '@/images/clients/my-online-cookbook/my-online-cookbook-cyan.png';
+import logoW5DEV from '@/images/clients/w5dev/w5dev-color-trans.png';
 import logoJediKay from '@/images/clients/jedikay/JediKay.png';
+import logoExtreme from '@/images/clients/extreme-networks/extreme-logo-color.svg';
 
 function CaseStudies({ caseStudies }: { caseStudies: MDXEntry<CaseStudy>[] }) {
   return (
@@ -86,10 +87,10 @@ function CaseStudies({ caseStudies }: { caseStudies: MDXEntry<CaseStudy>[] }) {
 const clients = [
   ['Ripleigh Designs', logoRipleighDesigns],
   ['JediKay', logoJediKay],
-  ['W5DEV', logoW5DEV],
+  ['Extreme Networks', logoExtreme],
   ['My Online Cookbook', logoMyOnlineCookbook],
+  ['W5DEV', logoW5DEV],
   ['Great Idea Media', logoGreatIdea],
-  ['GreatIdeaDotDev', logoGreatIdea],
 ];
 
 function Clients() {
@@ -97,18 +98,24 @@ function Clients() {
     <Container className='mt-24 sm:mt-32 lg:mt-40'>
       <FadeIn>
         <h2 className='font-display text-2xl font-semibold text-neutral-950'>
-          You’re in good company
+          You&apos;re in good company
         </h2>
       </FadeIn>
       <FadeInStagger className='mt-10' faster>
         <Border as={FadeIn} />
-        <ul role='list' className='grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4'>
+        <ul
+          role='list'
+          className='pt-10 grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 lg:grid-cols-4'
+        >
           {clients.map(([client, logo]) => (
-            <li key={client} className='group'>
-              <FadeIn className='overflow-hidden'>
-                <Border className='pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px lg:group-[&:nth-child(4)]:-mt-px'>
-                  <Image src={logo} alt={client} unoptimized />
-                </Border>
+            <li key={client} className='flex flex-row justify-center items-center'>
+              <FadeIn>
+                <Image
+                  src={logo}
+                  alt={client}
+                  unoptimized
+                  className={client === 'Ripleigh Designs' ? '' : 'h-36 w-36'}
+                />
               </FadeIn>
             </li>
           ))}
@@ -120,8 +127,7 @@ function Clients() {
 
 export const metadata: Metadata = {
   title: 'Our Work',
-  description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+  description: 'Engineering superior software solutions for the Magnolia State and beyond.',
 };
 
 export default async function Work() {
@@ -131,20 +137,26 @@ export default async function Work() {
     <>
       <PageIntro eyebrow='Our work' title='Proven solutions for real-world problems.'>
         <p>
-          We believe in efficiency and maximizing our resources to provide the best value to our
-          clients. The primary way we do that is by re-using the same five projects we’ve been
-          developing for the past decade.
+          We collaborate closely with our clients, understanding their unique needs and aspirations.
+          Whether it&apos;s developing captivating websites, programming custom software, or
+          engineering robust backend solutions, we infuse every project with local expertise and
+          unwavering dedication. Our commitment to quality, efficiency, and relationships with our
+          clients sets us apart. At GreatIdea.dev, we don&apos;t just build websites, we craft
+          digital experiences that leave a lasting impression.
         </p>
       </PageIntro>
 
       <CaseStudies caseStudies={caseStudies} />
 
       <Testimonial
-        className='mt-24 sm:mt-32 lg:mt-40'
+        className='mt-24 sm:mt-32 lg:mt-40 text-black'
         client={{ name: 'Mail Smirk', logo: logoRipleighDesigns }}
       >
-        We approached <em>Studio</em> because we loved their past work. They delivered something
-        remarkably similar in record time.
+        John&apos;s team reached out and suggested we finally work on a website to accompany our
+        upcoming transition to our new facility. Their hard work and dedication has been evident
+        every step of the way in the process, from planning to production. Our next steps will be
+        integrating E-Commerce so we can get some product on the site and start making passive
+        sales.
       </Testimonial>
 
       <Clients />
