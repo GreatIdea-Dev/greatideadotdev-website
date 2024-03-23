@@ -1,24 +1,24 @@
-import logo from '@/images/clients/ripleighdesigns/RipleighDesignsWordmark.svg'
-import imageHero from './hero.jpg'
-import imageEmilySelman from './emily-selman.jpg'
+import logo from '@/images/clients/my-online-cookbook/my-online-cookbook-cyan.png'
+import imageHero from './hero.png'
+import imageEmilyJackson from './emily-jackson.jpg'
 
 export const caseStudy = {
-  client: 'Unseal',
-  title: 'Get a hodl of your health',
+  client: 'My Online Cookbook',
+  title: 'A better way to store recipes',
   description:
-    'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
+    'My Online Cookbook is an all-in-one solution for eliminating the clutter of storing physical recipes.',
   summary: [
-    'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
-    'We built out the blockchain infrastructure that supports Unseal. Unfortunately, we took a massive loss on this project when Unseal’s cryptocurrency, PlaceboCoin, went to zero.',
+    'Annoyed by the constant battle of keeping ingredients off of expensive cookbooks and printed recipes, Emily Jackson, local pastry chef and caterer, reached out to see if we could help create an online solution for her to store her vast library of cookbooks and hand written recipes so she could access them from everywhere.',
+    'We built out the application with redundancy and security in mind, using the latest technologies like Next.js, Go, PostgreSQL, and Docker.',
   ],
   logo,
   image: { src: imageHero },
-  date: '2022-10',
-  service: 'Blockchain development',
+  date: '2022-11',
+  service: 'Fullstack Web Development',
   testimonial: {
-    author: { name: 'Emily Selman', role: 'Head of Engineering at Unseal' },
+    author: { name: 'Emily Jackson', role: 'Head Chef at EJ Catering' },
     content:
-      'Studio did an amazing job building out our core blockchain infrastructure and I’m sure once PlaceboCoin rallies they’ll be able to finish the project.',
+      "John's team did a remarkable job of making my life as a chef easier and more manageable. I never imagined I would be able to get rid of all of my physical recipes and cookbooks and rely on a simple, easy-to-use solution to quickly find recipes. Best of all, I can share and print any of the recipes with a click of a button!",
   },
 }
 
@@ -29,31 +29,33 @@ export const metadata = {
 
 ## Overview
 
-Annoyed that his wife’s gynaecologist would not disclose the results of her pap smear, Unseal’s founder Kevin came up with the idea of using the block chain to store individual health records.
+Annoyed by the constant battle of keeping ingredients off of expensive cookbooks and printed recipes, Emily Jackson, local pastry chef and caterer, reached out to see if we could help create an online solution for her to store her vast library of cookbooks and hand written recipes so she could access them from everywhere.
 
-Unseal approached us early in their development, having just raised funds through an ICO of their cryptocurrency PlaceboCoin. Having never worked on a web3 product we decided to farm the project out to an agency in Kyiv and skim profits off the top. Despite frequent complaints about missile strikes and power outages, the Ukrainians delivered the brief ahead of schedule.
+We got to work and spun up a Next.js instance and worked on creating an aesthetically pleasing UI that was easy to use and understand. After that we spun up a PostgreSQL database and worked to engineer the datatypes and schema to handle user and recipe information. We decided that building the API with Go was a no-brainer since it is quick and efficient and easy to simply write code in a secure and effective manner.
 
-After reaching a high of $12k, PlaceboCoin went to zero in a matter of hours. Because we took payment in PlaceboCoin but our subcontractors insisted on being paid in USD we have taken a huge financial loss on this project.
+We specifically developed this so that we did not have to rely on online microservices and hosted solutions, so Emily could access her recipes even during an internet or network outage. To do this, we dockerized our database and API and hosted it on Emily's network with tools to manage it remotely to assist with any technical problems. We also hosted a local instance of the frontend just in case the cloud-based website was ever unreachable. This should ensure that as long as Emily has power, she will have access to all of her recipes. 
+
+We went above and beyond and coupled the software solutions with a robust battery backup and to ensure she can still access her recipes from her home for up to 84 hours after the losing power. To assist her business, we set up a new custom domain for her and an email address that uses that domain so she looks professional to all of her prospective clients.
 
 ## What we did
 
 <TagList>
-  <TagListItem>Blockchain development</TagListItem>
-  <TagListItem>Backend (Solidity)</TagListItem>
-  <TagListItem>Smart contracts</TagListItem>
+  <TagListItem>Frontend (Next.js)</TagListItem>
+  <TagListItem>Backend API (Go)</TagListItem>
+  <TagListItem>Database (Postgres)</TagListItem>
+  <TagListItem>Docker</TagListItem>
 </TagList>
 
 <Blockquote
-  author={{ name: 'Emily Selman', role: 'Head of Engineering at Unseal' }}
-  image={{ src: imageEmilySelman }}
+  author={{ name: 'Emily Jackson', role: 'Pastry Chef and Caterer' }}
+  image={{ src: imageEmilyJackson }}
 >
-  Studio did an amazing job building out our core blockchain infrastructure and
-  I’m sure once PlaceboCoin rallies they’ll be able to finish the project.
+  John's team did a remarkable job of making my life as a chef easier and more manageable. I never imagined I would be able to get rid of all of my physical recipes and cookbooks and rely on a simple, easy-to-use solution to quickly find recipes. Best of all, I can share and print any of the recipes with a click of a button!
 </Blockquote>
 
 <StatList>
-  <StatListItem value="34%" label="Fewer transactions" />
-  <StatListItem value="10%" label="Slower transactions" />
-  <StatListItem value="1000ms" label="Transaction latency" />
-  <StatListItem value="3" label="Active nodes" />
+  <StatListItem value="300%" label="less mess" />
+  <StatListItem value="15x" label="faster recipe searching" />
+  <StatListItem value="25%" label="fewer broken eggs" />
+  <StatListItem value="5" label="empty bookshelfs" />
 </StatList>
