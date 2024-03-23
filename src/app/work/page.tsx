@@ -98,7 +98,7 @@ function Clients() {
     <Container className='mt-24 sm:mt-32 lg:mt-40'>
       <FadeIn>
         <h2 className='font-display text-2xl font-semibold text-neutral-950'>
-          You’re in good company
+          You&apos;re in good company
         </h2>
       </FadeIn>
       <FadeInStagger className='mt-10' faster>
@@ -127,7 +127,7 @@ function Clients() {
 
 export const metadata: Metadata = {
   title: 'Our Work',
-  description: 'Crafting digital excellence for the Magnolia State and beyond. ',
+  description: 'Engineering superior software solutions for the Magnolia State and beyond.',
 };
 
 export default async function Work() {
@@ -138,11 +138,11 @@ export default async function Work() {
       <PageIntro eyebrow='Our work' title='Proven solutions for real-world problems.'>
         <p>
           We collaborate closely with our clients, understanding their unique needs and aspirations.
-          Whether it&apos;s designing captivating websites, developing custom software, or shaping
-          powerful marketing strategies, we infuse every project with local expertise and unwavering
-          dedication. Our commitment to quality, transparency, and measurable results sets us apart.
-          At GreatIdea.dev, we don&apos;t just build websites; we craft digital experiences that
-          leave a lasting impression.
+          Whether it&apos;s developing captivating websites, programming custom software, or
+          engineering robust backend solutions, we infuse every project with local expertise and
+          unwavering dedication. Our commitment to quality, efficiency, and relationships with our
+          clients sets us apart. At GreatIdea.dev, we don&apos;t just build websites, we craft
+          digital experiences that leave a lasting impression.
         </p>
       </PageIntro>
 
@@ -153,7 +153,7 @@ export default async function Work() {
         client={{ name: 'Mail Smirk', logo: logoRipleighDesigns }}
       >
         John&apos;s team reached out and suggested we finally work on a website to accompany our
-        upcoming transition to our new facility. Their hardwork and dedication has been evident
+        upcoming transition to our new facility. Their hard work and dedication has been evident
         every step of the way in the process, from planning to production. Our next steps will be
         integrating E-Commerce so we can get some product on the site and start making passive
         sales.
