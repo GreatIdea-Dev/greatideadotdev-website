@@ -120,8 +120,7 @@ function Clients() {
 
 export const metadata: Metadata = {
   title: 'Our Work',
-  description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+  description: 'Crafting digital excellence for the Magnolia State and beyond. ',
 };
 
 export default async function Work() {
@@ -131,9 +130,12 @@ export default async function Work() {
     <>
       <PageIntro eyebrow='Our work' title='Proven solutions for real-world problems.'>
         <p>
-          We believe in efficiency and maximizing our resources to provide the best value to our
-          clients. The primary way we do that is by re-using the same five projects we’ve been
-          developing for the past decade.
+          We collaborate closely with our clients, understanding their unique needs and aspirations.
+          Whether it&apos;s designing captivating websites, developing custom software, or shaping
+          powerful marketing strategies, we infuse every project with local expertise and unwavering
+          dedication. Our commitment to quality, transparency, and measurable results sets us apart.
+          At GreatIdea.dev, we don&apos;t just build websites; we craft digital experiences that
+          leave a lasting impression.
         </p>
       </PageIntro>
 
