@@ -18,6 +18,7 @@ import logoGreatIdea from '@/images/clients/great-idea/great-idea-logomark-color
 import logoMyOnlineCookbook from '@/images/clients/my-online-cookbook/my-online-cookbook-cyan.png';
 import logoW5DEV from '@/images/clients/w5dev/w5dev-color-trans.png';
 import logoJediKay from '@/images/clients/jedikay/JediKay.png';
+import logoExtreme from '@/images/clients/extreme-networks/extreme-logo-color.svg';
 
 function CaseStudies({ caseStudies }: { caseStudies: MDXEntry<CaseStudy>[] }) {
   return (
@@ -86,8 +87,9 @@ function CaseStudies({ caseStudies }: { caseStudies: MDXEntry<CaseStudy>[] }) {
 const clients = [
   ['Ripleigh Designs', logoRipleighDesigns],
   ['JediKay', logoJediKay],
-  ['W5DEV', logoW5DEV],
+  ['Extreme Networks', logoExtreme],
   ['My Online Cookbook', logoMyOnlineCookbook],
+  ['W5DEV', logoW5DEV],
   ['Great Idea Media', logoGreatIdea],
 ];
 
@@ -103,7 +105,7 @@ function Clients() {
         <Border as={FadeIn} />
         <ul
           role='list'
-          className='pt-10 grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 lg:grid-cols-5'
+          className='pt-10 grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 lg:grid-cols-4'
         >
           {clients.map(([client, logo]) => (
             <li key={client} className='flex flex-row justify-center items-center'>
