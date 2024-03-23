@@ -16,7 +16,7 @@ import logoRipleighDesignsDark from '@/images/clients/ripleighdesigns/RipleighDe
 import logoJediKay from '@/images/clients/jedikay/JediKay.png';
 import logoW5DEV from '@/images/clients/w5dev/w5dev-white.png';
 import logoMyOnlineCookbook from '@/images/clients/my-online-cookbook/my-online-cookbook-white.png';
-import logoGreatIdea from '@/images/clients/great-idea/Great Idea Logomark.svg';
+import logoGreatIdea from '@/images/clients/great-idea/great-idea-logomark-light.svg';
 import imageLaptop from '@/images/laptop.jpg';
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx';
 

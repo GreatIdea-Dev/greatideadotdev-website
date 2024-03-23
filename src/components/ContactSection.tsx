@@ -14,12 +14,39 @@ export function ContactSection() {
             </h2>
             <div className='mt-6 flex'>
               <Button className='!text-xl' href='/contact' invert>
-                Say Hello
+                Say hello
               </Button>
             </div>
             <div className='mt-10 border-t border-white/10 pt-10'>
               <h3 className='font-display text-base font-semibold text-white'>Our locations</h3>
               <Offices invert className='mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2' />
+            </div>
+          </div>
+        </div>
+      </FadeIn>
+    </Container>
+  );
+}
+
+export function ContactSectionLight() {
+  return (
+    <Container className='mt-24 sm:mt-32 lg:mt-40 w-full'>
+      <FadeIn className='-mx-6 rounded-4xl text-neutral-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12 border border-neutral-950'>
+        <div className='w-full'>
+          <div className='max-w-xl'>
+            <h2 className='font-display text-3xl font-medium text-neutral-950 [text-wrap:balance] sm:text-4xl'>
+              Tell us about your project...
+            </h2>
+            <div className='mt-6 flex'>
+              <Button className='!text-xl bg-neutral-950 hover:bg-neutral-950/80' href='/contact'>
+                Say hello
+              </Button>
+            </div>
+            <div className='mt-10 border-t border-neutral-950 pt-10'>
+              <h3 className='font-display text-base font-semibold text-neutral-950'>
+                Our locations
+              </h3>
+              <Offices className='mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2' />
             </div>
           </div>
         </div>
