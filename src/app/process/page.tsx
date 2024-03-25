@@ -227,7 +227,7 @@ export default function Process() {
     <>
       <PageIntro eyebrow='Our process' title='How we work'>
         <p>
-          We believe in efficiency and maximizing our resources to proivide our clients with the
+          We believe in efficiency and maximizing our resources to provide our clients with the best
           possible experience, regardless of the project size. Our process is designed to be
           transparent and collaborative, ensuring that our clients are involved every step of the
           way.
