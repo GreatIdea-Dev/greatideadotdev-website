@@ -50,7 +50,7 @@ const team = [
       },
       {
         name: 'Kadyn Stafford',
-        role: 'UI/UX Engineer',
+        role: 'Software Developer',
         image: { src: imageKadynStafford },
       },
     ],
