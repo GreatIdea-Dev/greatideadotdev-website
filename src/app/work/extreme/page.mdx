@@ -16,9 +16,9 @@ export const caseStudy = {
   date: '2024-02',
   service: 'Web development, custom applications',
   testimonial: {
-    author: { name: 'Jim Daniels', role: 'Senior Systems Engineer' },
+    author: { name: 'Extreme Networks', role: 'Connect Beyond the Network' },
     content:
-      'John and his team helped put together a quick solution to our problems and facilitates our unique needs to solve our day-to-day problems. We are excited about continuing this relationship to produce a future local app to handle this in the future.',
+      'John and his team helped put together a quick solution to our problems and facilitates our unique needs to solve our day-to-day problems. We are excited about continuing this relationship to produce a future standalone product.',
   },
 };
 
@@ -37,9 +37,9 @@ This project posed a straightforward problem: fetch data from an API, then serve
 
 We solved this problem initially with a fairly routine solution. We used SolidJS to spin up a website and hosted it. That's when the fun started happening. Google Chrome has been securing their web browser more and more with each update, and in one update, they removed the ability to access private-network resources from a public ip address. This plus Vercel's policy to not make unsecure requests posed some fairly large technological problems for use.
 
-To combat these problems, we decided to instead create a field to paste the JSON object that was returned from the API call, then parse that data into a table. This wouldn't be our final solution, but it would allow us to develop the solution and get realtime feedback. We got good feedback regarding how the data was used and which parts were necessary, and we added links so engineers could access each of the tables. Our feedback for this iteration has been overwhelmingly positive and we are happy to be in the next phase of this project.\_createMdxContent
+To combat these problems, we decided to instead create a field to paste the JSON object that was returned from the API call, then parse that data into a table. This wouldn't be our final solution, but it would allow us to develop the solution and get realtime feedback. We got good feedback regarding how the data was used and which parts were necessary, and we added links so engineers could access each of the tables. Our feedback for this iteration has been overwhelmingly positive and we are happy to be in the next phase of this project.
 
-The third solution made it clear what our goal needs to be for this project: develop a standalone application for this client. We are now planning this application out and plan to use Go to build and ship the app, along with re-enabling the API calls to make things more streamlined for this client. Our hope is that techs can use this without the need for an internet connection to further support the security requirements of their clients.
+The third issue made it clear what our goal needs to be for this project: develop a standalone application for this client. We are now planning this application out and plan to use Go to build and ship the app, along with re-enabling the API calls to make things more streamlined for this client. Our hope is that techs can use this without the need for an internet connection to further support the security requirements of their clients.
 
 ## What we did
 
@@ -49,12 +49,12 @@ The third solution made it clear what our goal needs to be for this project: dev
 </TagList>
 
 <Blockquote
-  author={{ name: 'Extreme Networks', role: 'Connect Beyond the Network' }}
+  author={{ name: caseStudy.testimonial.author.name, role: caseStudy.testimonial.author.role }}
   image={{ src: imageExtremeLogo }}
 >
-  John really spent time getting down to the meat and potatoes of what we needed
-  and worked lightning fast to start providing solutions we could use and test
-  from Day 1. We cannot wait to see the final standalone product.
+  John and his team helped put together a quick solution to our problems and facilitates our unique 
+  needs to solve our day-to-day problems. We are excited about continuing this relationship to produce
+  a future standalone product.
 </Blockquote>
 
 <StatList>
