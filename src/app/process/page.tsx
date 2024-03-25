@@ -58,21 +58,18 @@ function Discover() {
     <Section title='Discover' image={{ src: imageWhiteboard }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
-          We work closely with our clients to understand their{' '}
-          <strong className='font-semibold text-neutral-950'>needs</strong> and goals, embedding
-          ourselves in their every day operations to understand what makes their business tick.
+          We start our projects by getting to know our clients business model to better understand
+          their <strong className='font-semibold text-neutral-950'>needs</strong> and goals for
+          their project.
         </p>
         <p>
-          Our team of private investigators shadow the company director’s for several weeks while
-          our account managers focus on going through their trash. Our senior security experts then
-          perform social engineering hacks to gain access to their{' '}
-          <strong className='font-semibold text-neutral-950'>business</strong> accounts — handing
-          that information over to our forensic accounting team.
+          We map out each project with a roadmap, laying out each step in the process, then dive
+          into each step with a fine-tooth comb to make sure we know exactly how to build out each
+          part.
         </p>
         <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className='font-semibold text-neutral-950'>plan</strong> and, more importantly, a
-          budget.
+          Only once we have clearly set out a blueprint of the requirements for the project and our
+          plan to accomplish each goal do we begin the process of building out the project.
         </p>
       </div>
 
@@ -80,12 +77,10 @@ function Discover() {
         Included in this phase
       </h3>
       <TagList className='mt-4'>
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
+        <TagListItem>Initial project planning</TagListItem>
+        <TagListItem>Client collaboration</TagListItem>
+        <TagListItem>Design coordination</TagListItem>
         <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
       </TagList>
     </Section>
   );
@@ -96,26 +91,32 @@ function Build() {
     <Section title='Build' image={{ src: imageLaptop, shape: 1 }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap for each product and
-          start working towards delivery. The roadmap is an intricately tangled mess of technical
-          nonsense designed to drag the project out as long as possible.
+          The build phase starts with the initial installation of the core project infrastructure
+          and any dependencies. From there, we prioritize the project requirements and features and
+          assign time estimates and add details to each task.
         </p>
         <p>
-          Each client is assigned a key account manager to keep lines of communication open and
-          obscure the actual progress of the project. They act as a buffer between the client’s
-          incessant nagging and the development team who are hard at work scouring open source
-          projects for code to re-purpose.
+          We then begin the process of dividing the tasks into sprints, each lasting 2 weeks. This
+          allows us to both set reasonable expectations, as well as track our own progress and make
+          sure we are accountable with our time.
         </p>
         <p>
-          Our account managers are trained to only reply to client emails after 9pm, several days
-          after the initial email. This reinforces the general aura that we are very busy and
-          dissuades clients from asking for changes.
+          With our sprints set, we begin taking tasks and completing them. After each sprint, we
+          offer our clients an opportunity to meet with us so we can share our progress and demo our
+          latest changes. We then take any feedback from our demo meeting and incorporate it into
+          our sprints so that we can continue to build out the project in a manner that best lines
+          up with the end goal for the project.
         </p>
       </div>
 
-      <Blockquote author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }} className='mt-12'>
-        Studio were so regular with their progress updates we almost began to think they were
-        automated!
+      <Blockquote
+        author={{ name: 'Emily Jackson', role: 'Head Chef at EJ Catering' }}
+        className='mt-12'
+      >
+        We were really impressed with the progress the team at GreatIdea.dev made each sprint. It
+        was cool to see the project transform from a simple idea to a fully functional application.
+        Seeing the progress each sprint was a great way to stay engaged and excited about the final
+        product.
       </Blockquote>
     </Section>
   );
@@ -126,22 +127,20 @@ function Deliver() {
     <Section title='Deliver' image={{ src: imageMeeting, shape: 2 }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
-          About halfway through the Build phase, we push each project out by 6 weeks due to a change
-          in <strong className='font-semibold text-neutral-950'>requirements</strong>. This allows
-          us to increase the budget a final time before launch.
+          Once our main sprint goals are complete, we begin the process of testing and Q&A. During
+          this stage, we invite the client to use the app as if they were using the final product to
+          help identify any bugs or make any changes to copy or design.
         </p>
         <p>
-          Despite largely using pre-built components, most of the{' '}
-          <strong className='font-semibold text-neutral-950'>progress</strong> on each project takes
-          place in the final 24 hours. The development time allocated to each client is actually
-          spent making augmented reality demos that go viral on social media.
+          During this phase, our team works vigorously with the client to ensure the project is
+          fully functional and any bugs are documented, prioritized and worked out prior to the
+          launch of the site.
         </p>
         <p>
-          We ensure that the main pages of the site are{' '}
-          <strong className='font-semibold text-neutral-950'>fully functional</strong> at launch —
-          the auxiliary pages will, of course, be lorem ipusm shells which get updated as part of
-          our exorbitant <strong className='font-semibold text-neutral-950'>maintenance</strong>{' '}
-          retainer.
+          Once we ensure that the main pages of the site are{' '}
+          <strong className='font-semibold text-neutral-950'>fully functional</strong>, we deploy
+          the site to the appropriate infrastructure and work with our client to monitor user
+          experience and traffic to ensure the launch is successful.
         </p>
       </div>
 
@@ -149,16 +148,17 @@ function Deliver() {
         Included in this phase
       </h3>
       <List className='mt-8'>
-        <ListItem title='Testing'>
-          Our projects always have 100% test coverage, which would be impressive if our tests
-          weren’t as porous as a sieve.
-        </ListItem>
-        <ListItem title='Infrastructure'>
-          To ensure reliability we only use the best Digital Ocean droplets that $4 a month can buy.
+        <ListItem title='Collaboration'>
+          Constant collaboration with the client and their team to ensure the deployed project meets
+          all preliminary requirements.
         </ListItem>
         <ListItem title='Support'>
-          Because we hold the API keys for every critical service your business uses, you can expect
-          a lifetime of support, and invoices, from us.
+          Monitoring and support to address any post-launch issues or optimizations necessary for
+          the success of the project.
+        </ListItem>
+        <ListItem title='Refinement'>
+          Continued refinement of the project to ensure it meets the needs of the client and their
+          users.
         </ListItem>
       </List>
     </Section>
@@ -177,37 +177,38 @@ function Values() {
 
       <SectionIntro eyebrow='Our values' title='Balancing reliability and innovation'>
         <p>
-          We strive to stay at the forefront of emerging trends and technologies, while completely
-          ignoring them and forking that old Rails project we feel comfortable using. We stand by
-          our core values to justify that decision.
+          We strive to provide the best possible experience for our clients by balancing our
+          enthusiasm for innovation with our commitment to reliability. We believe in finding a
+          happy medium between cutting-edge technology and tried-and-true methods to ensure that our
+          clients receive the best value possible.
         </p>
       </SectionIntro>
 
       <Container className='mt-24'>
         <GridList>
           <GridListItem title='Meticulous'>
-            The first part of any partnership is getting our designer to put your logo in our
-            template. The second step is getting them to do the colors.
+            Our attention to detail is unmatched, and our clients can rest assured that we will
+            never overlook even the smallest detail.
           </GridListItem>
           <GridListItem title='Efficient'>
-            We pride ourselves on never missing a deadline which is easy because most of the work
-            was done years ago.
+            We constantly find ways to improve our processes and make sure we are delivering the
+            best possible product in the most efficient manner.
           </GridListItem>
           <GridListItem title='Adaptable'>
-            Every business has unique needs and our greatest challenge is shoe-horning those needs
-            into something we already built.
+            We know that the only constant in the tech industry is change, and we are always ready
+            to pivot when necessary.
           </GridListItem>
           <GridListItem title='Honest'>
-            We are transparent about all of our processes, banking on the simple fact our clients
-            never actually read anything.
+            We believe in transparency and honesty with our clients, and we strive to be up front
+            and set reasonable expectations for each project.
           </GridListItem>
           <GridListItem title='Loyal'>
-            We foster long-term relationships with our clients that go beyond just delivering a
-            product, allowing us to invoice them for decades.
+            Our clients are our backbone, and we are committed to ensuring that they are satisfied
+            with the work we provide, even after the project is complete.
           </GridListItem>
           <GridListItem title='Innovative'>
-            The technological landscape is always evolving and so are we. We are constantly on the
-            lookout for new open source projects to clone.
+            Our team is always on the lookout for new and exciting services to offer our clients
+            that will enhance their online presence and help them stand out from the competition.
           </GridListItem>
         </GridList>
       </Container>
@@ -226,9 +227,10 @@ export default function Process() {
     <>
       <PageIntro eyebrow='Our process' title='How we work'>
         <p>
-          We believe in efficiency and maximizing our resources to provide the best value to our
-          clients. The primary way we do that is by re-using the same five projects we’ve been
-          developing for the past decade.
+          We believe in efficiency and maximizing our resources to proivide our clients with the
+          possible experience, regardless of the project size. Our process is designed to be
+          transparent and collaborative, ensuring that our clients are involved every step of the
+          way.
         </p>
       </PageIntro>
 
