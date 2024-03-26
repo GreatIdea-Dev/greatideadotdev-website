@@ -1,6 +1,6 @@
 import logo from '@/images/clients/ripleighdesigns/RipleighDesignsWordmark-dark.svg';
 import imageHero from './hero.png';
-import imageLeighannLewis from './leighann-lewis.jpeg';
+import imageLeighann from './leighann.jpeg';
 
 export const caseStudy = {
   client: 'Ripleigh Designs',
@@ -17,7 +17,7 @@ export const caseStudy = {
   service: 'Frontend Web Development, CMS, E-Commerce',
   testimonial: {
     author: {
-      name: 'Leighann Lewis',
+      name: 'Leighann',
       role: 'Founder/Owner of Ripleigh Designs',
     },
     content:
@@ -48,8 +48,8 @@ We also went above and beyond by providing a custom domain for her website and s
 </TagList>
 
 <Blockquote
-  author={{ name: 'Leighann Lewis', role: 'Founder/Owner of Ripleigh Designs' }}
-  image={{ src: imageLeighannLewis }}
+  author={{ name: caseStudy.testimonial.author.name, role: caseStudy.testimonial.author.role }}
+  image={{ src: imageLeighann }}
 >
   The team at GreatIdea.dev went above and beyond to make sure our website met
   our needs to showcase our products and provide potential customers a way to

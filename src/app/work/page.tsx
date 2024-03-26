@@ -150,13 +150,11 @@ export default async function Work() {
 
       <Testimonial
         className='mt-24 sm:mt-32 lg:mt-40 text-black'
-        client={{ name: 'Mail Smirk', logo: logoRipleighDesigns }}
+        client={{ name: 'Extreme Networks', logo: logoExtreme }}
       >
-        John&apos;s team reached out and suggested we finally work on a website to accompany our
-        upcoming transition to our new facility. Their hard work and dedication has been evident
-        every step of the way in the process, from planning to production. Our next steps will be
-        integrating E-Commerce so we can get some product on the site and start making passive
-        sales.
+        John and his team helped put together a quick solution to our problems and facilitates our
+        unique needs to solve our day-to-day problems. We are excited about continuing this
+        relationship to produce a future standalone product.
       </Testimonial>
 
       <Clients />

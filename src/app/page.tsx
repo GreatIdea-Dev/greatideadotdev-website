@@ -12,12 +12,12 @@ import { SectionIntro } from '@/components/SectionIntro';
 import { StylizedImage } from '@/components/StylizedImage';
 import { Testimonial } from '@/components/Testimonial';
 import logoRipleighDesigns from '@/images/clients/ripleighdesigns/RipleighDesignsWordmark.svg';
-import logoRipleighDesignsDark from '@/images/clients/ripleighdesigns/RipleighDesignsWordmark-dark.svg';
 import logoJediKay from '@/images/clients/jedikay/JediKay.png';
 import logoW5DEV from '@/images/clients/w5dev/w5dev-white.png';
 import logoMyOnlineCookbook from '@/images/clients/my-online-cookbook/my-online-cookbook-white.png';
 import logoGreatIdea from '@/images/clients/great-idea/great-idea-logomark-light.svg';
 import logoExtreme from '@/images/clients/extreme-networks/extreme-logo-white.svg';
+import logoExtremeColor from '@/images/clients/extreme-networks/extreme-logo-color.svg';
 import imageLaptop from '@/images/laptop.jpg';
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx';
 
@@ -203,11 +203,11 @@ export default async function Home() {
 
       <Testimonial
         className='mt-24 sm:mt-32 lg:mt-40'
-        client={{ name: 'Phobia', logo: logoRipleighDesignsDark }}
+        client={{ name: 'Extreme Networks', logo: logoExtremeColor }}
       >
-        The team at GreatIdea.dev went above and beyond to make sure our website met our needs to
-        showcase our products and provide potential customers a way to contact us and engage in
-        business.
+        John and his team helped put together a quick solution to our problems and facilitates our
+        unique needs to solve our day-to-day problems. We are excited about continuing this
+        relationship to produce a future standalone product.
       </Testimonial>
 
       <Services />
