@@ -15,6 +15,7 @@ function FeaturedPackages() {
         'Our basic package is perfect for small businesses and startups looking to establish an online presence.',
       features: [
         'Up to 4 pages',
+        'Contact form setup and configuration',
         'Free domain name for 1 year',
         'Included monthly analytics',
         '24-hour support response time',
@@ -30,6 +31,7 @@ function FeaturedPackages() {
         'Our deluxe package includes everything in the basic package plus additional features, such as custom blogs or e-commerce.',
       features: [
         'Up to 4 basic pages',
+        'Contact form setup and configuration',
         'Free domain name for 1 year',
         'Included monthly analytics',
         '24-hour support response time',
@@ -113,6 +115,25 @@ function FeaturedPackages() {
                   className='rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-neutral-950 ring-1 ring-inset ring-neutral-800 hover:ring-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950 flex flex-row justify-center items-center'
                 >
                   Buy additional pages&nbsp;<span aria-hidden='true'>&rarr;</span>
+                </a>
+              </div>
+              <div className='flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 bg-white ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center'>
+                <div className='lg:min-w-0 lg:flex-1'>
+                  <h3 className='text-lg font-semibold leading-8 tracking-tight text-neutral-950'>
+                    Google Business Initial Setup
+                  </h3>
+                  <p className='mt-1 text-base leading-7 text-gray-600'>
+                    For an additional $100, we will set up your Google Business account for you.
+                    This includes setting up your business profile, adding your business to Google
+                    Maps, and configuring the initial information for your business profile.
+                  </p>
+                </div>
+                <a
+                  href='https://www.paypal.com/ncp/payment/UCDD2RCBMJTX8'
+                  target='_blank'
+                  className='rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-neutral-950 ring-1 ring-inset ring-neutral-800 hover:ring-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-950 flex flex-row justify-center items-center'
+                >
+                  Buy Google Business Setup&nbsp;<span aria-hidden='true'>&rarr;</span>
                 </a>
               </div>
             </div>
